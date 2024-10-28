@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página Home">
+    <meta name="keywords" content="Home, Página, Boas-Vindas">
+    <meta name="author" content="Ricardo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Bem-vindo à Página Inicial!</h1>
+            <p>Estamos felizes em tê-lo aqui.</p>
+        </header>
+        <main>
+            <section class="welcome-message">
+                <h2 id="user-name">Olá, Usuário!</h2> 
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 SesiSenai. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        const userName = localStorage.getItem('nomeUsuario');
+        
+        if (userName) {
+            document.getElementById('user-name').textContent = `Olá, ${userName}!`;
+        }
+    </script>
+</body>
+</html>
